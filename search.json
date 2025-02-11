@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "My Explorations with LLMs",
     "section": "",
-    "text": "AI’s Take on “What Makes a Good Joke?”: Can it Be Funny?\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nlogic\n\n\n\nAI’s attempts at humor are put to the test as it generates jokes, revealing both its strengths in observational comedy and its limitations compared to the creativity and timing of human comedians.\n\n\n\n\n\nFeb 10, 2025\n\n\nNora Elliott\n\n\n\n\n\n\n\n\n\n\n\n\nAI vs. Human Chef: Can A Chat Bot Really Help You Cook Dinner?\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nNLPs\n\n\n\nThis blog post explores how an AI-powered recipe generator can suggest meal ideas based on available ingredients and compares its capabilities to the creativity and intuition of a human chef.\n\n\n\n\n\nFeb 10, 2025\n\n\nNora Elliott\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\n\nNo matching items"
+    "text": "AI and Mental Health: Can Machines Help Us Feel Better?\n\n\n\n\n\n\nLLMs\n\n\nNLPs\n\n\nlogic\n\n\n\nThis blog explores the potential of AI-powered mental health tools, evaluating their ability to provide emotional support, track moods, and offer coping strategies, while comparing their strengths and limitations to human therapy.\n\n\n\n\n\nFeb 11, 2025\n\n\nNora Elliott\n\n\n\n\n\n\n\n\n\n\n\n\nAI’s Take on “What Makes a Good Joke?”: Can it Be Funny?\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nlogic\n\n\n\nAI’s attempts at humor are put to the test as it generates jokes, revealing both its strengths in observational comedy and its limitations compared to the creativity and timing of human comedians.\n\n\n\n\n\nFeb 10, 2025\n\n\nNora Elliott\n\n\n\n\n\n\n\n\n\n\n\n\nAI vs. Human Chef: Can A Chat Bot Really Help You Cook Dinner?\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nNLPs\n\n\n\nThis blog post explores how an AI-powered recipe generator can suggest meal ideas based on available ingredients and compares its capabilities to the creativity and intuition of a human chef.\n\n\n\n\n\nFeb 10, 2025\n\n\nNora Elliott\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/Post1/Post1.html",
@@ -40,6 +40,48 @@
     "title": "AI’s Take on “What Makes a Good Joke?”: Can it Be Funny?",
     "section": "What surprised me about AI’s humor? What was AI better at than I expected?",
     "text": "What surprised me about AI’s humor? What was AI better at than I expected?\nWhat really surprised me about AI, though, is how well it did at observational humor. The joke about procrastination and cat videos? I didn’t expect AI to pull that off. It actually captured a very human experience—something that feels universal. The fact that AI picked up on this everyday observation and turned it into a solid joke made me realize that while it’s not perfect, it’s learning how to read situations and trends in a way that mirrors what makes humans laugh.\nIt also surprised me how quickly AI can generate jokes. While not every punchline lands perfectly, it’s able to process information and structure humor in real-time, something that would take a human comedian far more time to write, test, and refine. AI is a quick thinker, even if it lacks the depth to really make a joke feel alive.\n\n\nCan AI be funny? Yes, but in a different way than a human comedian.\nIt can replicate basic humor patterns and structure jokes, but it doesn’t yet have the personal touch or nuanced understanding of why something is funny in a given context. The humor is still very much surface-level, but that doesn’t mean it can’t make you smile. It’s a fun experiment, but for now, human comedians still have the edge when it comes to creativity, timing, and injecting the rich context that makes humor truly memorable.\nWould I trust AI to headline my comedy night? Probably not. But was it funnier than I expected? Yea it surprised me."
+  },
+  {
+    "objectID": "posts/Posts Folder/Post3.html",
+    "href": "posts/Posts Folder/Post3.html",
+    "title": "AI and Mental Health: Can Machines Help Us Feel Better?",
+    "section": "",
+    "text": "We’ve seen AI take on everything from self-driving cars to writing essays, but can it truly understand human emotions and provide meaningful mental health support? To find out, I explored the world of AI-powered mental health apps to see what they offer, how effective they are, and where they fall short.\nI tested several AI-driven mental health tools, including chatbots like Woebot, Wysa, and Replika, and rated their ability to provide emotional support, practical coping strategies, and a sense of connection. Here’s what I discovered."
+  },
+  {
+    "objectID": "posts/Posts Folder/Post3.html#ai-and-guided-mental-health-exercises-do-they-work",
+    "href": "posts/Posts Folder/Post3.html#ai-and-guided-mental-health-exercises-do-they-work",
+    "title": "AI and Mental Health: Can Machines Help Us Feel Better?",
+    "section": "AI and Guided Mental Health Exercises: Do They Work?",
+    "text": "AI and Guided Mental Health Exercises: Do They Work?\nBeyond chatbots, AI-powered apps like Youper, Sanvello, and MindDoc provide structured mental health exercises to help manage anxiety and depression.\n\nYouper\nUses AI to help track moods and suggest mindfulness techniques. Rating: 7/10 #### Sanvello Focuses on evidence-based mental health strategies, with guided meditations and journaling prompts. Rating: 8/10 #### MindDoc Offers AI-assisted mood tracking and journaling for people struggling with anxiety and depression. Rating: 6/10\n\n\nWhere do AI Mental Health Apps Succeed\n\nthey help users track emotional patterns over time, which can be valuable for understanding mental health triggers\nthey provide structured coping strageies, such as mindfulness and guided breathing exercises\nthey offer privacy and accessibility, making mental health tools available to anyone, anywhere\n\n\n\nWhere do AI Mental Health Apps Struggle\n\nAI can provide generalized advice, but it lacks the nuance of a human therapist\nThey rely heavily on self guided effort, if you don’t engage with the exercises, they won’t be effective\nSevere mental health conditions require human intervention, which AI can’t replace"
+  },
+  {
+    "objectID": "posts/Posts Folder/Post3.html#what-makes-ai-mental-health-tools-different-from-human-therapy",
+    "href": "posts/Posts Folder/Post3.html#what-makes-ai-mental-health-tools-different-from-human-therapy",
+    "title": "AI and Mental Health: Can Machines Help Us Feel Better?",
+    "section": "What Makes AI Mental Health Tools Different from Human Therapy?",
+    "text": "What Makes AI Mental Health Tools Different from Human Therapy?\nThe biggest difference between AI driven mental health tools and human therapists is depth and connection\nA therapist doesn’t just provide a list of coping mechanisms, they also listen and provide validation based on clients emotions, history and experiences. While AI follows a structured approach based on recognized patterns. It can suggest deep-breathing exercises when you say you’re anxious, but it won’t ask about your childhood or recognize patterns in the way a human therapist would.\nAI doesn’t understand emotional nuance. It can recognize words like “sad” or “stressed” but won’t fully grasp sarcasm, deep emotional pain, or the kind of comfort humans offer through shared experiences. A therapist might read body language, notice a change in tone, or offer a moment of silence—things that AI can’t replicate.\nThat said, AI still has a role to play. It can provide instant access to support when needed and help users build healthy mental habits. It may not replace therapists, but it can complement traditional therapy by offering tools for managing mental health between sessions."
+  },
+  {
+    "objectID": "posts/Posts Folder/Post3.html#where-does-ais-mental-health-support-come-from",
+    "href": "posts/Posts Folder/Post3.html#where-does-ais-mental-health-support-come-from",
+    "title": "AI and Mental Health: Can Machines Help Us Feel Better?",
+    "section": "Where Does AI’s Mental Health Support Come From?",
+    "text": "Where Does AI’s Mental Health Support Come From?\nAI mental health tools are trained on thousands of therapy transcripts, psychology research papers, and wellness articles. They recognize patterns in human emotions and provide respinses based on CBT principles, mindfullness tecnhniques, and self help strategies. However, they do not possess genuine human empathy or understanding, they mimic supportive behavior rather than truly feeling it\nAI learns from data, not experiences, which means it lacks the depth of human insight. But that doesn’t mean it can’t be useful, it just means it should be viewed as a tool rather than a replacement for real human care."
+  },
+  {
+    "objectID": "posts/Posts Folder/Post3.html#what-surprised-me-about-ai-mental-health-apps",
+    "href": "posts/Posts Folder/Post3.html#what-surprised-me-about-ai-mental-health-apps",
+    "title": "AI and Mental Health: Can Machines Help Us Feel Better?",
+    "section": "What surprised me about AI mental health apps?",
+    "text": "What surprised me about AI mental health apps?\nDespite their limitations, AI mental health tools were more helpful than I expected in certain areas\n\nAI is great at mood tracking, apps like youper and minddoc provided useful insights into emotional patterns, which coukd ve valuable for self reflection\nAI responses felt more human than I expected, some chatbot interactions felt genuinely warm and engaging\nInstant support is a big plus, AI is available 24/7, which is a major advantage for people who need immediate comfort"
+  },
+  {
+    "objectID": "posts/Posts Folder/Post3.html#can-ai-really-help-with-mental-health",
+    "href": "posts/Posts Folder/Post3.html#can-ai-really-help-with-mental-health",
+    "title": "AI and Mental Health: Can Machines Help Us Feel Better?",
+    "section": "Can AI Really Help with Mental Health?",
+    "text": "Can AI Really Help with Mental Health?\n\nYes - but with limitations\nAI mental health tools can provide valuable support, offer coping strategies, and help users track emotions, but they don’t replace the deoth, understanding, and personal connection of humab therapists.\nFor mild anxiety, stress management, or general emotional well-being, AI-driven apps can be a great starting point. But for deep emotional struggles, complex mental health conditions, or anyone in crisis, human interaction is irreplacable.\nWould I trust AI as my sole therapist? Not yet. But am I impressed by how much it can assist in daily mental health maintenance? Absolutely.\nAI in mental health isn’t about replacing human connection—it’s about enhancing accesibility and providing support when we need it most. And in that sense, AI might help us feel a little better."
   },
   {
     "objectID": "about.html",

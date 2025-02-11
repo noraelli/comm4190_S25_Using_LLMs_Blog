@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Nora Elliott">
+<meta name="dcterms.date" content="2025-02-11">
+<meta name="description" content="This blog explores the potential of AI-powered mental health tools, evaluating their ability to provide emotional support, track moods, and offer coping strategies, while comparing their strengths and limitations to human therapy.">
 
-<title>My Explorations with LLMs</title>
+<title>AI and Mental Health: Can Machines Help Us Feel Better? – My Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9d8ce3552587b2d184a21f37b2b0e480.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-9d8ce3552587b2d184a21f37b2b0e480.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +69,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">My Explorations with LLMs</span>
     </a>
   </div>
@@ -149,7 +92,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -172,200 +115,147 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">My Explorations with LLMs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">AI and Mental Health: Can Machines Help Us Feel Better?</h1>
+                  <div>
+        <div class="description">
+          This blog explores the potential of AI-powered mental health tools, evaluating their ability to provide emotional support, track moods, and offer coping strategies, while comparing their strengths and limitations to human therapy.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">NLPs</div>
+                <div class="quarto-category">logic</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Nora Elliott </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 11, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(4)</span></div><div class="category" data-category="TkxQcw==">NLPs <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bG9naWM=">logic <span class="quarto-category-count">(3)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(3)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>We’ve seen AI take on everything from self-driving cars to writing essays, but can it truly understand human emotions and provide meaningful mental health support? To find out, I explored the world of AI-powered mental health apps to see what they offer, how effective they are, and where they fall short.</p>
+<p>I tested several AI-driven mental health tools, including chatbots like Woebot, Wysa, and Replika, and rated their ability to provide emotional support, practical coping strategies, and a sense of connection. Here’s what I discovered.</p>
+<section id="ai-as-a-digital-therapist-evaluating-ai-mental-health-apps" class="level3">
+<h3 class="anchored" data-anchor-id="ai-as-a-digital-therapist-evaluating-ai-mental-health-apps">AI as a Digital Therapist? Evaluating AI Mental Health Apps</h3>
+<p>AI-powered mental health apps are designed to offer support for stress, anxiety, and other emotional challenges. Some are built like chatbots, engaging in conversations to offer comfort and advice. Others focus on guided exercises based on cognitive behavioral therapy (CBT) principles. But do they actually work?</p>
+<p>One of the most popular AI mental health tools is the chatbot, designed to simulate a conversation with a therapist or friend. Here’s how they performed:</p>
+<section id="woebot" class="level4">
+<h4 class="anchored" data-anchor-id="woebot">Woebot</h4>
+<p>This AI chatbot uses principles of CBT to help reframe negative thoughts. The responses are structured and often helpful, but there’s a clear limit—it doesn’t “understand” emotions the way a human would. Rating: 7/10</p>
+</section>
+<section id="wysa" class="level4">
+<h4 class="anchored" data-anchor-id="wysa">Wysa</h4>
+<p>This chatbot is designed to help users manage stress and anxiety by suggesting exercises and techniques like deep breathing or journaling. Rating: 8/10, more interactive than I expected</p>
+</section>
+<section id="replika" class="level4">
+<h4 class="anchored" data-anchor-id="replika">Replika</h4>
+<p>Marketed as a personal AI companion, Replika learns your conversational style and adapts. It can feel surprisingly human-like at times, but sometimes the conversations become repetitive. Rating: 6/10</p>
+</section>
+</section>
+<section id="what-ai-chatbots-do-well" class="level3">
+<h3 class="anchored" data-anchor-id="what-ai-chatbots-do-well">What AI Chatbots Do Well</h3>
+<ul>
+<li>they provide instant 24/7 access to emotional support</li>
+<li>they offer non judgemental conversations, which can be useful for people hesitatnt to open up to a human</li>
+<li>they introduce CBT based techniques, which cna be effective in managing negative thoughts</li>
+</ul>
+</section>
+<section id="where-they-fall-short" class="level3">
+<h3 class="anchored" data-anchor-id="where-they-fall-short">Where They Fall Short</h3>
+<ul>
+<li>AI lacks genuine emotional intelligence - it can be recognize keywords but doesn’t feel emotions</li>
+<li>Responses feel generic and impersonal - especially for complex emotional struggles</li>
+<li>There is no actual human connection which can often be crucial in therapy</li>
+</ul>
+</section>
+<section id="ai-and-guided-mental-health-exercises-do-they-work" class="level2">
+<h2 class="anchored" data-anchor-id="ai-and-guided-mental-health-exercises-do-they-work">AI and Guided Mental Health Exercises: Do They Work?</h2>
+<p>Beyond chatbots, AI-powered apps like Youper, Sanvello, and MindDoc provide structured mental health exercises to help manage anxiety and depression.</p>
+<section id="youper" class="level4">
+<h4 class="anchored" data-anchor-id="youper">Youper</h4>
+<p>Uses AI to help track moods and suggest mindfulness techniques. Rating: 7/10 #### Sanvello Focuses on evidence-based mental health strategies, with guided meditations and journaling prompts. Rating: 8/10 #### MindDoc Offers AI-assisted mood tracking and journaling for people struggling with anxiety and depression. Rating: 6/10</p>
+</section>
+<section id="where-do-ai-mental-health-apps-succeed" class="level3">
+<h3 class="anchored" data-anchor-id="where-do-ai-mental-health-apps-succeed">Where do AI Mental Health Apps Succeed</h3>
+<ul>
+<li>they help users track emotional patterns over time, which can be valuable for understanding mental health triggers</li>
+<li>they provide structured coping strageies, such as mindfulness and guided breathing exercises</li>
+<li>they offer privacy and accessibility, making mental health tools available to anyone, anywhere</li>
+</ul>
+</section>
+<section id="where-do-ai-mental-health-apps-struggle" class="level3">
+<h3 class="anchored" data-anchor-id="where-do-ai-mental-health-apps-struggle">Where do AI Mental Health Apps Struggle</h3>
+<ul>
+<li>AI can provide generalized advice, but it lacks the nuance of a human therapist</li>
+<li>They rely heavily on self guided effort, if you don’t engage with the exercises, they won’t be effective</li>
+<li>Severe mental health conditions require human intervention, which AI can’t replace</li>
+</ul>
+</section>
+</section>
+<section id="what-makes-ai-mental-health-tools-different-from-human-therapy" class="level2">
+<h2 class="anchored" data-anchor-id="what-makes-ai-mental-health-tools-different-from-human-therapy">What Makes AI Mental Health Tools Different from Human Therapy?</h2>
+<p>The biggest difference between AI driven mental health tools and human therapists is depth and connection</p>
+<p>A therapist doesn’t just provide a list of coping mechanisms, they also listen and provide validation based on clients emotions, history and experiences. While AI follows a structured approach based on recognized patterns. It can suggest deep-breathing exercises when you say you’re anxious, but it won’t ask about your childhood or recognize patterns in the way a human therapist would.</p>
+<p>AI doesn’t understand emotional nuance. It can recognize words like “sad” or “stressed” but won’t fully grasp sarcasm, deep emotional pain, or the kind of comfort humans offer through shared experiences. A therapist might read body language, notice a change in tone, or offer a moment of silence—things that AI can’t replicate.</p>
+<p>That said, AI still has a role to play. It can provide instant access to support when needed and help users build healthy mental habits. It may not replace therapists, but it can complement traditional therapy by offering tools for managing mental health between sessions.</p>
+</section>
+<section id="where-does-ais-mental-health-support-come-from" class="level2">
+<h2 class="anchored" data-anchor-id="where-does-ais-mental-health-support-come-from">Where Does AI’s Mental Health Support Come From?</h2>
+<p>AI mental health tools are trained on thousands of therapy transcripts, psychology research papers, and wellness articles. They recognize patterns in human emotions and provide respinses based on CBT principles, mindfullness tecnhniques, and self help strategies. However, they do not possess genuine human empathy or understanding, they mimic supportive behavior rather than truly feeling it</p>
+<p>AI learns from data, not experiences, which means it lacks the depth of human insight. But that doesn’t mean it can’t be useful, it just means it should be viewed as a tool rather than a replacement for real human care.</p>
+</section>
+<section id="what-surprised-me-about-ai-mental-health-apps" class="level2">
+<h2 class="anchored" data-anchor-id="what-surprised-me-about-ai-mental-health-apps">What surprised me about AI mental health apps?</h2>
+<p>Despite their limitations, AI mental health tools were more helpful than I expected in certain areas</p>
+<ul>
+<li>AI is great at mood tracking, apps like youper and minddoc provided useful insights into emotional patterns, which coukd ve valuable for self reflection</li>
+<li>AI responses felt more human than I expected, some chatbot interactions felt genuinely warm and engaging</li>
+<li>Instant support is a big plus, AI is available 24/7, which is a major advantage for people who need immediate comfort</li>
+</ul>
+</section>
+<section id="can-ai-really-help-with-mental-health" class="level2">
+<h2 class="anchored" data-anchor-id="can-ai-really-help-with-mental-health">Can AI Really Help with Mental Health?</h2>
+<section id="yes---but-with-limitations" class="level4">
+<h4 class="anchored" data-anchor-id="yes---but-with-limitations">Yes - but with limitations</h4>
+<p>AI mental health tools can provide valuable support, offer coping strategies, and help users track emotions, but they don’t replace the deoth, understanding, and personal connection of humab therapists.</p>
+<p>For mild anxiety, stress management, or general emotional well-being, AI-driven apps can be a great starting point. But for deep emotional struggles, complex mental health conditions, or anyone in crisis, human interaction is irreplacable.</p>
+<p>Would I trust AI as my sole therapist? Not yet. But am I impressed by how much it can assist in daily mental health maintenance? Absolutely.</p>
+<p>AI in mental health isn’t about replacing human connection—it’s about enhancing accesibility and providing support when we need it most. And in that sense, AI might help us feel a little better.</p>
 
 
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TExNcyUyQ05MUHMlMkNsb2dpYw==" data-listing-date-sort="1739232000000" data-listing-file-modified-sort="1739318144958" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="990">
-<div class="thumbnail">
-<p><a href="./posts/Posts Folder/Post3.html" class="no-external"></a></p><a href="./posts/Posts Folder/Post3.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/Posts Folder/Post3.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Posts Folder/Post3.html" class="no-external">AI and Mental Health: Can Machines Help Us Feel Better?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Posts Folder/Post3.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TkxQcw=='); return false;">
-NLPs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Posts Folder/Post3.html" class="no-external">This blog explores the potential of AI-powered mental health tools, evaluating their ability to provide emotional support, track moods, and offer coping strategies, while comparing their strengths and limitations to human therapy.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/Posts Folder/Post3.html" class="no-external">
-<div class="listing-date">
-Feb 11, 2025
-</div>
-<div class="listing-author">
-Nora Elliott
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1739145600000" data-listing-file-modified-sort="1739318144952" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1700">
-<div class="thumbnail">
-<p><a href="./posts/Post1/Post1.html" class="no-external"></a></p><a href="./posts/Post1/Post1.html" class="no-external">
-<p class="card-img-top"><img src="posts/Post1/Post1_files/figure-html/2fba3cb3-7ac3-48d1-8e7a-4187e5652baf-4-fd24b90f-bc7f-471e-9960-0229a9feff09.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/Post1/Post1.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Post1/Post1.html" class="no-external">AI’s Take on “What Makes a Good Joke?”: Can it Be Funny?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Post1/Post1.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Post1/Post1.html" class="no-external">AI’s attempts at humor are put to the test as it generates jokes, revealing both its strengths in observational comedy and its limitations compared to the creativity and timing of human comedians.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/Post1/Post1.html" class="no-external">
-<div class="listing-date">
-Feb 10, 2025
-</div>
-<div class="listing-author">
-Nora Elliott
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ05MUHM=" data-listing-date-sort="1739145600000" data-listing-file-modified-sort="1739318144958" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1250">
-<div class="thumbnail">
-<p><a href="./posts/Post1/Post2.html" class="no-external"></a></p><a href="./posts/Post1/Post2.html" class="no-external">
-<p class="card-img-top"><img src="posts/Post1/Post2_files/figure-html/77725a72-8c9c-464c-ab24-108fc850c946-3-fadc30dc-54b6-405a-9c9b-f76e6d07ac44.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/Post1/Post2.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Post1/Post2.html" class="no-external">AI vs.&nbsp;Human Chef: Can A Chat Bot Really Help You Cook Dinner?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Post1/Post2.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TkxQcw=='); return false;">
-NLPs
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Post1/Post2.html" class="no-external">This blog post explores how an AI-powered recipe generator can suggest meal ideas based on available ingredients and compares its capabilities to the creativity and intuition of a human chef.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/Post1/Post2.html" class="no-external">
-<div class="listing-date">
-Feb 10, 2025
-</div>
-<div class="listing-author">
-Nora Elliott
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1739318144927" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
-<div class="thumbnail">
-<p><a href="./posts/000_test_post/index.html" class="no-external"></a></p><a href="./posts/000_test_post/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/000_test_post/gpt3-5.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/000_test_post/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post/index.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/000_test_post/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/000_test_post/index.html" class="no-external">An example post from a Jupyter notebook</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post/index.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
