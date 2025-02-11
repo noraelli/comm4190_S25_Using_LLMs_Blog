@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://noraelli.github.io/comm4190_S25_Using_LLMs_Blog/posts/000_test_post/index.html</loc>
-    <lastmod>2025-02-11T14:11:56.001Z</lastmod>
-  </url>
-  <url>
-    <loc>https://noraelli.github.io/comm4190_S25_Using_LLMs_Blog/posts/Post1/Post2.html</loc>
-    <lastmod>2025-02-11T14:11:56.007Z</lastmod>
-  </url>
-  <url>
-    <loc>https://noraelli.github.io/comm4190_S25_Using_LLMs_Blog/about.html</loc>
-    <lastmod>2025-02-11T14:11:56.000Z</lastmod>
-  </url>
-  <url>
     <loc>https://noraelli.github.io/comm4190_S25_Using_LLMs_Blog/index.html</loc>
-    <lastmod>2025-02-11T14:11:56.000Z</lastmod>
+    <lastmod>2025-02-11T14:17:30.562Z</lastmod>
   </url>
   <url>
     <loc>https://noraelli.github.io/comm4190_S25_Using_LLMs_Blog/posts/Post1/Post1.html</loc>
-    <lastmod>2025-02-11T14:11:56.002Z</lastmod>
+    <lastmod>2025-02-11T14:17:30.588Z</lastmod>
+  </url>
+  <url>
+    <loc>https://noraelli.github.io/comm4190_S25_Using_LLMs_Blog/about.html</loc>
+    <lastmod>2025-02-11T14:17:30.562Z</lastmod>
+  </url>
+  <url>
+    <loc>https://noraelli.github.io/comm4190_S25_Using_LLMs_Blog/posts/000_test_post/index.html</loc>
+    <lastmod>2025-02-11T14:17:30.563Z</lastmod>
+  </url>
+  <url>
+    <loc>https://noraelli.github.io/comm4190_S25_Using_LLMs_Blog/posts/Post1/Post2.html</loc>
+    <lastmod>2025-02-11T14:17:30.593Z</lastmod>
   </url>
 </urlset>
