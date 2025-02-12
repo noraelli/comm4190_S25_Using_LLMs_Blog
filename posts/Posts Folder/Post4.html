@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Nora Elliott">
+<meta name="dcterms.date" content="2025-02-12">
+<meta name="description" content="Can AI deliver a TED Talk that resonates? We put it to the test to see if it could capture the essence of storytelling, engagement, and inspiration">
+
+<title>Can AI Give a TED Talk? Testing the Limits of AI Inspiration – My Explorations with LLMs</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-9d8ce3552587b2d184a21f37b2b0e480.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">My Explorations with LLMs</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Can AI Give a TED Talk? Testing the Limits of AI Inspiration</h1>
+                  <div>
+        <div class="description">
+          Can AI deliver a TED Talk that resonates? We put it to the test to see if it could capture the essence of storytelling, engagement, and inspiration
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">Logic</div>
+                <div class="quarto-category">NLPs</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Nora Elliott </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 12, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p>What would an AI talk about if it were asked to give a TED Talk?</p>
+<p>Would the talk captivate the audience or leave them wishing for a human speaker instead?</p>
+<p>To find out, I decided to have an AI create a TED Talk script on a random topic and then evaluate whether it could hold the audience’s attention. The challenge: AI doesn’t live in the world, it doesn’t have personal experiences, and it lacks the human connection that makes a good TED Talk unforgettable. Could an AI still create something that might resonate with us?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Post4_files/figure-html/136c5b8f-ce59-47bf-b979-1583ff4b53a4-1-38763db3-73df-489e-9641-6b847e018142.png" class="img-fluid figure-img"></p>
+<figcaption>pngtree-shining-bright-light-bulb-png-image_8539561.png</figcaption>
+</figure>
+</div>
+<p>Here’s the script AI generated for the TED Talk:</p>
+<section id="the-power-of-imperfection-why-we-should-celebrate-flaws" class="level2">
+<h2 class="anchored" data-anchor-id="the-power-of-imperfection-why-we-should-celebrate-flaws">“The Power of Imperfection: Why We Should Celebrate Flaws</h2>
+<section id="opening" class="level4">
+<h4 class="anchored" data-anchor-id="opening">Opening:</h4>
+<p>The lights go down. A soft but confident voice fills the room.</p>
+<p>“Good evening, everyone. I’m here to talk about something we all share: our imperfections. The very thing that we often hide, avoid, or criticize. What if I told you that embracing imperfection could be the key to living a more fulfilling life? A life that’s not about perfection or flawless performance, but about being unapologetically human.”</p>
+<p>Pause for effect.</p>
+<p>“Let’s start with a story—imagine you’re watching a movie, and you’re totally immersed in it. The actors, the plot, the setting—it’s all perfect. But at some point, you notice a tiny mistake: an actor’s line is a little off, a prop falls out of place, or the lighting shifts in a way it shouldn’t. Suddenly, the perfect movie loses its charm. The illusion is shattered. Why? Because we, as humans, are conditioned to seek authenticity, not perfection. Perfection feels staged, unnatural. And it’s the flaws in the story that make it real.”</p>
+<p>Pause.</p>
+<p>“Now think about your own life. How often do you focus on the things that aren’t quite right? The small mistakes at work, the little missteps in conversations, the imperfections in your appearance? What if, instead of focusing on those flaws, you embraced them as part of who you are?”</p>
+</section>
+<section id="middle" class="level4">
+<h4 class="anchored" data-anchor-id="middle">Middle:</h4>
+<p>The tone shifts to a more reflective, encouraging tone.</p>
+<p>“We all strive for perfection—whether it’s in our careers, relationships, or even on social media. But why do we feel the need to be perfect? It’s the fear of judgment, of not being good enough. But guess what? Everyone else is just as imperfect as you. In fact, it’s our imperfections that connect us. They create vulnerability, which leads to empathy. It’s why we relate to characters in movies who stumble, or to a friend who shares their struggles. It’s the rawness, the authenticity, that makes them memorable.”</p>
+<p>Pause.</p>
+<p>“Let’s talk about mistakes for a moment. We often see mistakes as setbacks, as things we need to fix or hide. But what if mistakes were a gift? A lesson in disguise? In fact, some of the world’s most famous innovations were the result of mistakes. Penicillin was discovered by accident. Post-it notes were invented because of a failed adhesive. The greatest discoveries often come from those moments when things don’t go according to plan.”</p>
+<p>Shift in tone.</p>
+<p>“So, what if you started seeing your imperfections as strengths rather than weaknesses? What if you stopped apologizing for being ‘imperfect’ and instead celebrated those little things that make you… you?”</p>
+</section>
+<section id="closing" class="level4">
+<h4 class="anchored" data-anchor-id="closing">Closing:</h4>
+<p>The voice becomes more hopeful, as if speaking directly to the audience.</p>
+<p>“Imagine a world where we stop hiding our flaws. Where we embrace the moments that don’t go perfectly. A world where imperfection is not something to be ashamed of, but something to be proud of. The next time you feel imperfect, remember that imperfection is what makes you human. It’s what connects you to others. It’s what makes you memorable. And, most importantly, it’s what makes life beautiful.”</p>
+<p>Pause.</p>
+<p>“Thank you.”</p>
+<hr>
+</section>
+<section id="could-ai-hold-the-audiences-attention" class="level3">
+<h3 class="anchored" data-anchor-id="could-ai-hold-the-audiences-attention">Could AI Hold the Audience’s Attention?</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Post4_files/figure-html/136c5b8f-ce59-47bf-b979-1583ff4b53a4-5-674e5874-19d6-44a0-81c3-f569f8d5eb91.png" class="img-fluid figure-img"></p>
+<figcaption>ai-robot-digital-machines-_10565321.png</figcaption>
+</figure>
+</div>
+<p>Not bad AI, it addresses a topic that’s relatable and introspective. The talk follows a logical structure, with a solid introduction, a well-supported middle, and a concluding message that encourages the audience to rethink how they view imperfection. But the big question remains: could an AI TED Talk hold the audience’s attention?</p>
+</section>
+<section id="what-worked" class="level3">
+<h3 class="anchored" data-anchor-id="what-worked">What Worked:</h3>
+<section id="relatable-topic" class="level4">
+<h4 class="anchored" data-anchor-id="relatable-topic">Relatable Topic:</h4>
+<p>The idea of embracing imperfection is universally relatable. It taps into something that everyone struggles with—whether it’s body image, career setbacks, or personal flaws. Everyone has felt that desire to be perfect at some point, so the theme resonates.</p>
+</section>
+<section id="positive-message" class="level4">
+<h4 class="anchored" data-anchor-id="positive-message">Positive Message:</h4>
+<p>The theme of turning imperfections into strengths is uplifting. The talk encourages a shift in perspective, urging us to stop fearing mistakes and embrace the growth that comes from them. It’s a feel-good, motivational message that’s hard to dismiss.</p>
+</section>
+<section id="structure" class="level4">
+<h4 class="anchored" data-anchor-id="structure">Structure:</h4>
+<p>The talk is well-organized and easy to follow. AI has a strong understanding of how to craft a speech, using hooks, transitions, and a clear conclusion. It’s a testament to how well AI can mimic human-style speechwriting.</p>
+</section>
+</section>
+<section id="what-fell-short" class="level3">
+<h3 class="anchored" data-anchor-id="what-fell-short">What Fell Short:</h3>
+<section id="lack-of-personal-connection" class="level4">
+<h4 class="anchored" data-anchor-id="lack-of-personal-connection">Lack of Personal Connection:</h4>
+<p>While the topic is relatable, the AI doesn’t bring personal experience into the speech. A human TED speaker might share a personal story of overcoming their own perfectionism or failing in a big way and learning from it. This personal vulnerability helps build a connection with the audience. AI, on the other hand, can’t speak from experience. The talk remains informative but feels a bit impersonal.</p>
+</section>
+<section id="emotional-depth" class="level4">
+<h4 class="anchored" data-anchor-id="emotional-depth">Emotional Depth:</h4>
+<p>One of the most powerful aspects of TED Talks is the emotional depth that human speakers bring. They inject passion, personal struggle, and authenticity into their words. AI, while capable of writing a coherent and logical speech, lacks the ability to truly embody emotion or vulnerability. It’s hard to get emotionally invested in a speech that’s generated by a machine.</p>
+</section>
+<section id="humor-and-timing" class="level4">
+<h4 class="anchored" data-anchor-id="humor-and-timing">Humor and Timing:</h4>
+<p>TED Talks often have moments of humor or wit that help break the tension and make the speaker more relatable. AI can create humor, but it doesn’t fully understand timing, delivery, or how to use humor in context. Without that nuanced touch, the speech might come off as more like a self-help article than a captivating live talk.</p>
+</section>
+</section>
+</section>
+<section id="the-purpose-of-a-ted-talk" class="level2">
+<h2 class="anchored" data-anchor-id="the-purpose-of-a-ted-talk">The Purpose of a TED Talk:</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Post4_files/figure-html/136c5b8f-ce59-47bf-b979-1583ff4b53a4-2-48c30295-eafb-4e45-bc86-1f85946e3224.png" class="img-fluid figure-img"></p>
+<figcaption>What-Is-A-TED-Talk_-Featured-Image-1.png</figcaption>
+</figure>
+</div>
+<p>A TED Talk’s primary purpose is to inspire, inform, and engage an audience by presenting new ideas or perspectives in a compelling and thought-provoking way. TED (Technology, Entertainment, and Design) is known for hosting speakers from various fields—science, art, psychology, business, and more—who present groundbreaking ideas, share personal stories, or offer insights into the human condition.</p>
+<section id="sharing-a-big-idea" class="level4">
+<h4 class="anchored" data-anchor-id="sharing-a-big-idea">Sharing a Big Idea:</h4>
+<p>TED speakers are often tasked with conveying an idea that challenges conventional thinking, inspires action, or presents a new way of understanding the world. It’s about sparking curiosity and leaving the audience with something to think about long after the talk is over.</p>
+</section>
+<section id="connection-through-storytelling" class="level4">
+<h4 class="anchored" data-anchor-id="connection-through-storytelling">Connection through Storytelling:</h4>
+<p>Personal stories are central to TED Talks. By sharing real-life experiences or lessons learned, speakers build a deeper emotional connection with their audience. Storytelling makes complex ideas more relatable, easier to digest, and often more memorable.</p>
+</section>
+<section id="engagement-and-inspiration" class="level4">
+<h4 class="anchored" data-anchor-id="engagement-and-inspiration">Engagement and Inspiration:</h4>
+<p>TED Talks aren’t just about information. They’re designed to engage and inspire. The best TED speakers infuse energy, passion, and authenticity into their presentations, making the audience feel emotionally invested in the subject.</p>
+</section>
+<section id="actionable-takeaways" class="level4">
+<h4 class="anchored" data-anchor-id="actionable-takeaways">Actionable Takeaways:</h4>
+<p>TED Talks aim to leave the audience with a clear, actionable takeaway—whether it’s a new way of thinking, a challenge to take on, or an opportunity to make a change in their own lives or work. The speaker should spark curiosity, but also guide the audience toward practical steps they can take to apply the new knowledge.</p>
+</section>
+</section>
+<section id="did-ai-hit-that-purpose" class="level2">
+<h2 class="anchored" data-anchor-id="did-ai-hit-that-purpose">Did AI Hit That Purpose?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Post4_files/figure-html/136c5b8f-ce59-47bf-b979-1583ff4b53a4-3-4ea3030b-8ecc-456d-a7d4-083cac624eae.png" class="img-fluid figure-img"></p>
+<figcaption>download.png</figcaption>
+</figure>
+</div>
+<p>When reviewing the AI-generated TED Talk script on “The Power of Imperfection,” it’s clear that the AI made a valiant attempt at meeting the purpose of a TED Talk, but there were areas where it fell short.</p>
+<section id="sharing-a-big-idea-1" class="level4">
+<h4 class="anchored" data-anchor-id="sharing-a-big-idea-1">Sharing a Big Idea:</h4>
+<p>The concept of embracing imperfection is undeniably a big idea—one that resonates with many people in today’s culture of perfectionism, especially with the rise of social media and constant self-optimization. The AI script presents this idea clearly, offering a fresh perspective on how imperfections can actually be strengths. In this sense, AI did succeed in offering a new way of thinking about something that’s very relatable.</p>
+</section>
+<section id="connection-through-storytelling-1" class="level4">
+<h4 class="anchored" data-anchor-id="connection-through-storytelling-1">Connection through Storytelling:</h4>
+<p>This is where AI misses the mark. While the speech was well-written and logical, it lacked a personal story. TED Talks are often memorable because of the personal, emotional connection a speaker can forge with their audience. A TED Talk about imperfection could have been much more impactful if the speaker had shared a personal failure or moment of vulnerability. It’s these stories that make ideas come alive. Without that personal touch, the talk feels somewhat like a lecture rather than a story-driven exploration of the theme.</p>
+</section>
+<section id="engagement-and-inspiration-1" class="level4">
+<h4 class="anchored" data-anchor-id="engagement-and-inspiration-1">Engagement and Inspiration:</h4>
+<p>While the AI script was motivational, it didn’t quite capture the emotional energy that a human TED speaker might bring. The best TED Talks often have a rhythm that builds and releases emotional tension—moments of humor, passion, or surprise that keep the audience on their toes. AI can generate an inspiring message, but it lacks the nuance and timing required to truly engage the audience emotionally. For example, AI can’t alter its tone or delivery based on how the audience is reacting. It writes a speech that would work in theory, but the delivery is left to chance, without the dynamic adjustments a human speaker would make.</p>
+</section>
+<section id="actionable-takeaways-1" class="level4">
+<h4 class="anchored" data-anchor-id="actionable-takeaways-1">Actionable Takeaways:</h4>
+<p>The AI speech does offer actionable takeaways by encouraging the audience to embrace their imperfections, see mistakes as opportunities, and stop striving for unattainable perfection. These are valuable insights that could have a lasting impact on the audience if delivered with more emotion. However, it’s missing the powerful call-to-action that might inspire immediate change—something a human speaker could add by tailoring the message to the specific audience they’re addressing. For example, a human speaker might challenge the audience to share a story about a personal failure or imperfection, leading to a more interactive and powerful conclusion.</p>
+</section>
+</section>
+<section id="so-should-we-put-chatgpt-on-ted" class="level2">
+<h2 class="anchored" data-anchor-id="so-should-we-put-chatgpt-on-ted">SO… Should we Put ChatGPT on Ted?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Post4_files/figure-html/136c5b8f-ce59-47bf-b979-1583ff4b53a4-4-5ace9c97-cfa2-4ba1-977e-fe456909c45d.jpg" class="img-fluid figure-img"></p>
+<figcaption>ted-talks-on-education-pic-scaled.jpg</figcaption>
+</figure>
+</div>
+<p>AI certainly has the capacity to generate a TED Talk that presents a big idea and offers insightful observations. The structure and content are solid, and the message is inspirational. However, where AI falls short is in the realm of human connection—the heart of what makes TED Talks so powerful. A key part of the TED Talk experience is the personal vulnerability and emotional energy that speakers bring to their presentation. AI, as impressive as it is at generating ideas and language, lacks the life experience, emotional depth, and interactive ability to truly engage an audience in the way a human speaker can.</p>
+<p>While the AI version might be informative and even thought-provoking, it doesn’t have the human qualities that make a TED Talk memorable. In short, AI can deliver the core message, but the magic that makes TED Talks so impactful comes from the storyteller—something AI can replicate but not fully capture.</p>
+<section id="so-while-its-clear-ai-has-the-technical-ability-to-write-a-ted-talk-it-doesnt-quite-hit-the-full-mark-when-it-comes-to-achieving-the-emotional-and-relational-purpose-that-ted-is-known-for." class="level4">
+<h4 class="anchored" data-anchor-id="so-while-its-clear-ai-has-the-technical-ability-to-write-a-ted-talk-it-doesnt-quite-hit-the-full-mark-when-it-comes-to-achieving-the-emotional-and-relational-purpose-that-ted-is-known-for.">So, while it’s clear AI has the technical ability to write a TED Talk, it doesn’t quite hit the full mark when it comes to achieving the emotional and relational purpose that TED is known for.</h4>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/noraelli\.github\.io\/comm4190_S25_Using_LLMs_Blog\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
