@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Nora Elliott">
+<meta name="dcterms.date" content="2025-02-10">
+<meta name="description" content="This blog post explores how an AI-powered recipe generator can suggest meal ideas based on available ingredients and compares its capabilities to the creativity and intuition of a human chef.">
 
-<title>My Explorations with LLMs</title>
+<title>AI vs.&nbsp;Human Chef: Can A Chat Bot Really Help You Cook Dinner? – My Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9d8ce3552587b2d184a21f37b2b0e480.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-9d8ce3552587b2d184a21f37b2b0e480.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +69,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">My Explorations with LLMs</span>
     </a>
   </div>
@@ -149,7 +92,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -172,239 +115,113 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">My Explorations with LLMs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">AI vs.&nbsp;Human Chef: Can A Chat Bot Really Help You Cook Dinner?</h1>
+                  <div>
+        <div class="description">
+          This blog post explores how an AI-powered recipe generator can suggest meal ideas based on available ingredients and compares its capabilities to the creativity and intuition of a human chef.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">prompting</div>
+                <div class="quarto-category">NLPs</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Nora Elliott </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 10, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(5)</span></div><div class="category" data-category="TG9naWM=">Logic <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TkxQcw==">NLPs <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bG9naWM=">logic <span class="quarto-category-count">(3)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(3)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>Ever stand in front of your fridge, staring at a bunch of random ingredients, trying to figure out what to make for dinner? Well, what if AI could help with that? I decided to test out an AI-powered recipe generator to see what it could come up with based on the contents of my fridge. I inputted a list of common ingredients—leftover chicken, bell peppers, onions, spinach, and some pantry staples—and let the AI work its magic. Here are some of the dishes it suggested, and how I think they’d turn out:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Post2_files/figure-html/77725a72-8c9c-464c-ab24-108fc850c946-3-fadc30dc-54b6-405a-9c9b-f76e6d07ac44.png" class="img-fluid figure-img"></p>
+<figcaption>pngtree-fridge-clipart-cartoon-illustration-of-an-open-fridge-with-food-vector-png-image_11066850.png</figcaption>
+</figure>
+</div>
+<section id="recipe-1-garlic-parmesan-chicken-pasta-with-spinach-and-bell-peppers" class="level4">
+<h4 class="anchored" data-anchor-id="recipe-1-garlic-parmesan-chicken-pasta-with-spinach-and-bell-peppers">Recipe 1: Garlic Parmesan Chicken Pasta with Spinach and Bell Peppers</h4>
+<p>The AI suggested a simple pasta dish, combining the chicken, garlic, spinach, and bell peppers. The recipe looked like it would turn out pretty well—comforting and quick. The garlic and parmesan would add flavor, while the spinach and bell peppers would bring in some freshness. The chicken would add substance, making it a satisfying meal. I imagine it would be a nice go-to for a busy weeknight, though I’d probably want to add a little more seasoning for extra depth of flavor. All in all, pretty solid.</p>
+</section>
+<section id="recipe-2-chicken-and-veggie-stir-fry" class="level4">
+<h4 class="anchored" data-anchor-id="recipe-2-chicken-and-veggie-stir-fry">Recipe 2: Chicken and Veggie Stir-Fry</h4>
+<p>This one’s a classic stir-fry, using chicken, bell peppers, onions, and spinach. Stir-fries are usually quick, and this would probably be a healthy, light meal. The AI’s recipe seemed straightforward, and I’m sure it would taste decent—though I think it could use some additional flavor, like soy sauce or sesame oil, to really bring it to life. While it’s an easy win when you’re low on time, it might feel a bit too basic without some extra kick.</p>
+</section>
+<section id="recipe-3-chicken-parmesan-stuffed-bell-peppers" class="level4">
+<h4 class="anchored" data-anchor-id="recipe-3-chicken-parmesan-stuffed-bell-peppers">Recipe 3: Chicken Parmesan Stuffed Bell Peppers</h4>
+<p>I’m always intrigued by stuffed peppers, and this AI-generated recipe would combine the chicken, spinach, tomatoes, and parmesan in a creative way. The chicken and spinach would give it a nice, hearty filling, while the roasted bell peppers would add sweetness. The melted parmesan on top would definitely add comfort. I think this would turn out to be a fun twist on a classic dish—definitely more inventive than the first two. If I were to try it, I’d be curious about how well the peppers cook and whether they get tender enough in the oven.</p>
+</section>
+<section id="recipe-4-spinach-and-chicken-quesadillas" class="level4">
+<h4 class="anchored" data-anchor-id="recipe-4-spinach-and-chicken-quesadillas">Recipe 4: Spinach and Chicken Quesadillas</h4>
+<p>Quesadillas are a quick, satisfying meal, and the AI’s take on them looked pretty good. It would be a crispy, cheesy dish with the chicken and spinach tucked inside. While I love a good quesadilla, I feel like this one might be a little light on flavor without some extra seasoning or a side of salsa. The crispy texture of the tortilla would be nice, but I’d probably want to throw in some other ingredients—like tomatoes, or maybe some spice—just to give it a little more depth. I think this would be decent for a casual meal, though.</p>
+<p>Overall, the AI-powered recipe generator did a solid job of suggesting meals based on the ingredients I had available. It gave me a variety of ideas, from classic comfort food like pasta to more creative dishes like stuffed bell peppers. But after thinking about it more, I started to consider the differences between an AI “chef” and a human chef.</p>
+</section>
+<section id="ai-vs.-human-chef" class="level2">
+<h2 class="anchored" data-anchor-id="ai-vs.-human-chef">AI vs.&nbsp;Human Chef</h2>
+<p>A human chef’s creativity, experience, and ability to understand the nuances of flavor go far beyond what any AI could currently replicate. When a chef enters the kitchen, they rely on more than just a list of ingredients. They have the ability to sense balance—what flavors need to be adjusted, what textures will complement each other, or even how the dish might be presented to enhance the overall experience. A human chef might intuitively add a splash of lemon juice to brighten up a dish or adjust the seasoning based on how the ingredients come together while cooking. On the other hand, AI lacks this kind of sensory feedback. It doesn’t have taste buds, nor does it have years of experience fine-tuning recipes and techniques. It works by drawing from patterns in the data it’s been trained on—recipes from cookbooks, food blogs, cooking websites, and countless other sources. This means that while AI can come up with perfectly acceptable dishes based on what ingredients are available, it doesn’t understand how those dishes will feel once they’re put together. There’s no personal touch in its cooking, no instinct to elevate a dish by making a tiny change, like adding a pinch of a specific spice at the right moment.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Post2_files/figure-html/77725a72-8c9c-464c-ab24-108fc850c946-2-9dfef18f-4987-49ff-9927-7854bbe9e261.png" class="img-fluid figure-img"></p>
+<figcaption>43ee1cafca2f947f0be0d94aeff0fc26-chef-cartoon-profession.png</figcaption>
+</figure>
+</div>
+</section>
+<section id="what-surprised-me" class="level2">
+<h2 class="anchored" data-anchor-id="what-surprised-me">What surprised me</h2>
+<p>What surprised me most was how well the AI was able to suggest meals using basic ingredients. It didn’t just throw out a random combination, but instead, it took common recipe structures and applied them intelligently to the ingredients I had. For example, the stuffed bell peppers seemed like a creative take, and I honestly didn’t expect the AI to come up with such a thoughtful idea from what I gave it. It showed me that, while AI isn’t going to be a Michelin-starred chef anytime soon, it’s very capable of proposing ideas that work within the limitations of available ingredients. What’s more, I was also surprised by how well the AI captured the idea of creating balanced meals. It recognized that chicken, veggies, and cheese are often used together and suggested combinations that made sense. The dishes, while basic, didn’t seem off-putting or odd, which is impressive given the AI doesn’t actually “taste” the food. It uses its vast database of recipe knowledge to predict what flavors and ingredients tend to complement each other based on data rather than experience.</p>
+</section>
+<section id="where-does-ai-get-its-knowledge-of-what-tastes-good" class="level2">
+<h2 class="anchored" data-anchor-id="where-does-ai-get-its-knowledge-of-what-tastes-good">Where does AI get its knowledge of what tastes good?</h2>
+<p>AI’s knowledge comes from its massive training on a wide range of data—especially culinary resources like recipe websites, cookbooks, blogs, and reviews. It doesn’t have a direct understanding of taste like a chef does. Instead, it’s more of a data-processing system that identifies patterns. For example, it can learn that chicken and garlic often go together in Mediterranean cuisine or that spinach is frequently paired with cheese in pasta dishes. It’s pulling from what’s worked before, from both common dishes and the success of those dishes based on reviews and feedback, to make predictions about what will taste good. However, without the human element—those sensory moments when a chef adjusts their dish based on what’s in front of them—AI can’t truly “know” what would taste good beyond the parameters of established culinary patterns. The recipes it creates aren’t born from experimentation or the chef’s personal knowledge—they’re the result of statistical analysis of what’s most likely to work.</p>
+<section id="the-ai-powered-recipe-generator-was-surprisingly-capable-of-offering-up-simple-quick-meals-that-were-logical-and-would-likely-be-enjoyable-to-eat-though-they-might-lack-the-depth-and-creativity-a-human-chef-could-bring-to-the-table." class="level4">
+<h4 class="anchored" data-anchor-id="the-ai-powered-recipe-generator-was-surprisingly-capable-of-offering-up-simple-quick-meals-that-were-logical-and-would-likely-be-enjoyable-to-eat-though-they-might-lack-the-depth-and-creativity-a-human-chef-could-bring-to-the-table.">The AI-powered recipe generator was surprisingly capable of offering up simple, quick meals that were logical and would likely be enjoyable to eat, though they might lack the depth and creativity a human chef could bring to the table.</h4>
+<p>It can certainly be helpful when you’re in a rush, especially when you’re staring into your fridge and feeling uninspired. But, when it comes to really elevating flavors or taking a meal to the next level, a human chef’s touch, based on expertise and an understanding of how flavors develop, still holds the upper hand.</p>
+<p>AI’s ability to come up with functional meal ideas shows that it can be a useful kitchen assistant, especially for beginners or those who need to work with limited ingredients. However, when it comes to the magic of cooking and creating something memorable, that’s where a human chef still shines.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Post2_files/figure-html/77725a72-8c9c-464c-ab24-108fc850c946-1-8ae93343-caf2-406f-9270-aacb427ab0c6.jpg" class="img-fluid figure-img"></p>
+<figcaption>360_F_416275833_h6zdOY2YqTq0VwAhmTvrANehceucH6xp.jpg</figcaption>
+</figure>
+</div>
+</section>
+<section id="would-i-trust-ai-to-cook-me-the-most-memorable-meal-of-my-life-probably-not.-but-it-can-for-sure-be-helpful-in-everyday-recipe-planning" class="level4">
+<h4 class="anchored" data-anchor-id="would-i-trust-ai-to-cook-me-the-most-memorable-meal-of-my-life-probably-not.-but-it-can-for-sure-be-helpful-in-everyday-recipe-planning">Would I trust AI to cook me the most memorable meal of my life? Probably not. But it can for sure be helpful in everyday recipe planning!</h4>
 
 
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TExNcyUyQ0xvZ2ljJTJDTkxQcw==" data-listing-date-sort="1739318400000" data-listing-file-modified-sort="1739366891707" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1813">
-<div class="thumbnail">
-<p><a href="./posts/Posts Folder/Post4.html" class="no-external"></a></p><a href="./posts/Posts Folder/Post4.html" class="no-external">
-<p class="card-img-top"><img src="posts/Posts Folder/Post4_files/figure-html/136c5b8f-ce59-47bf-b979-1583ff4b53a4-1-38763db3-73df-489e-9641-6b847e018142.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/Posts Folder/Post4.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Posts Folder/Post4.html" class="no-external">Can AI Give a TED Talk? Testing the Limits of AI Inspiration</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Posts Folder/Post4.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TG9naWM='); return false;">
-Logic
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TkxQcw=='); return false;">
-NLPs
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Posts Folder/Post4.html" class="no-external">Can AI deliver a TED Talk that resonates? We put it to the test to see if it could capture the essence of storytelling, engagement, and inspiration</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/Posts Folder/Post4.html" class="no-external">
-<div class="listing-date">
-Feb 12, 2025
-</div>
-<div class="listing-author">
-Nora Elliott
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="TExNcyUyQ05MUHMlMkNsb2dpYw==" data-listing-date-sort="1739232000000" data-listing-file-modified-sort="1739366891700" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="990">
-<div class="thumbnail">
-<p><a href="./posts/Posts Folder/Post3.html" class="no-external"></a></p><a href="./posts/Posts Folder/Post3.html" class="no-external">
-<p class="card-img-top"><img src="posts/Posts Folder/Post3_files/figure-html/26ff572e-3fda-4790-ae6b-81ea7494596d-4-94318df8-8ff4-4170-8658-a56b1103782d.webp"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/Posts Folder/Post3.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Posts Folder/Post3.html" class="no-external">AI and Mental Health: Can Machines Help Us Feel Better?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Posts Folder/Post3.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TkxQcw=='); return false;">
-NLPs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Posts Folder/Post3.html" class="no-external">This blog explores the potential of AI-powered mental health tools, evaluating their ability to provide emotional support, track moods, and offer coping strategies, while comparing their strengths and limitations to human therapy.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/Posts Folder/Post3.html" class="no-external">
-<div class="listing-date">
-Feb 11, 2025
-</div>
-<div class="listing-author">
-Nora Elliott
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1739145600000" data-listing-file-modified-sort="1739366891694" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1700">
-<div class="thumbnail">
-<p><a href="./posts/Posts Folder/Post1.html" class="no-external"></a></p><a href="./posts/Posts Folder/Post1.html" class="no-external">
-<p class="card-img-top"><img src="posts/Posts Folder/Post1_files/figure-html/2fba3cb3-7ac3-48d1-8e7a-4187e5652baf-4-fd24b90f-bc7f-471e-9960-0229a9feff09.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/Posts Folder/Post1.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Posts Folder/Post1.html" class="no-external">AI’s Take on “What Makes a Good Joke?”: Can it Be Funny?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Posts Folder/Post1.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Posts Folder/Post1.html" class="no-external">AI’s attempts at humor are put to the test as it generates jokes, revealing both its strengths in observational comedy and its limitations compared to the creativity and timing of human comedians.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/Posts Folder/Post1.html" class="no-external">
-<div class="listing-date">
-Feb 10, 2025
-</div>
-<div class="listing-author">
-Nora Elliott
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ05MUHM=" data-listing-date-sort="1739145600000" data-listing-file-modified-sort="1739366891699" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1250">
-<div class="thumbnail">
-<p><a href="./posts/Posts Folder/Post2.html" class="no-external"></a></p><a href="./posts/Posts Folder/Post2.html" class="no-external">
-<p class="card-img-top"><img src="posts/Posts Folder/Post2_files/figure-html/77725a72-8c9c-464c-ab24-108fc850c946-3-fadc30dc-54b6-405a-9c9b-f76e6d07ac44.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/Posts Folder/Post2.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Posts Folder/Post2.html" class="no-external">AI vs.&nbsp;Human Chef: Can A Chat Bot Really Help You Cook Dinner?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Posts Folder/Post2.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TkxQcw=='); return false;">
-NLPs
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/Posts Folder/Post2.html" class="no-external">This blog post explores how an AI-powered recipe generator can suggest meal ideas based on available ingredients and compares its capabilities to the creativity and intuition of a human chef.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/Posts Folder/Post2.html" class="no-external">
-<div class="listing-date">
-Feb 10, 2025
-</div>
-<div class="listing-author">
-Nora Elliott
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1739366891669" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
-<div class="thumbnail">
-<p><a href="./posts/000_test_post/index.html" class="no-external"></a></p><a href="./posts/000_test_post/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/000_test_post/gpt3-5.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/000_test_post/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post/index.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/000_test_post/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/000_test_post/index.html" class="no-external">An example post from a Jupyter notebook</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post/index.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
