@@ -1,6 +1,6 @@
 ---
-title: About
-image: images
+title: Nora's Blog
+image: profile.PNG
 about:
   template: jolla
 ---
